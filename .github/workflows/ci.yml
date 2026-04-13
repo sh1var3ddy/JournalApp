@@ -22,3 +22,9 @@ jobs:
           cache: maven
 
       - run: ./mvnw clean verify
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app.jar
+          path: target/*.jar
