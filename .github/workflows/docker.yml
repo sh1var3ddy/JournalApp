@@ -28,7 +28,7 @@ jobs:
         with:
           workflow: ci.yml
           run_id: ${{ github.event.workflow_run.id }}
-          name: app-jar
+          name: app.jar
           path: .
 
       - name: Rename JAR
