@@ -72,7 +72,7 @@ public class JournalEntryServiceTest {
         journalEntry2.setDate(LocalDateTime.now());
 
         when(userService.getUserByUserName(userName)).thenReturn(Optional.of(testUser));
-        when(journalEntryRepository.save(journalEntry)).thenReturn(journalEntry2);
+        when(journalEntryRepository.save(journalEntry)).thenReturn(journalEntry);
         when(userService.updateUser(any(User.class))).thenReturn(testUser);
 
         // act
